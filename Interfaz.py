@@ -1,3 +1,4 @@
+"Practica 2, Intefaz Grafica"
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
