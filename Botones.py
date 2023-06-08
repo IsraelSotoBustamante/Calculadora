@@ -1,20 +1,28 @@
 "Practica 1,Botones"
 
-"Se llama a la biblioteca y las herramientas a utilizar"
 from tkinter import Button, Label, Tk
 
-"Se crea la ventana y se le asigna un nombre"
 class VentanaEjemplo:
     def __init__(self, master):
+        """
+        Clase que define una ventana de ejemplo con una interfaz gráfica simple.
+
+        Args:
+            master (Tk): El objeto raíz Tkinter.
+
+        Atributos:
+            master (Tk): El objeto raíz Tkinter.
+            etiqueta (Label): Etiqueta de texto en la ventana.
+            botonSaludo (Button): Botón para saludar.
+            botonCerrar (Button): Botón para cerrar la ventana.
+        """
         self.master = master
 
-        "Texto de la parte superior de la interfaz"
         master.title("Una simple interfaz gráfica")
 
         self.etiqueta = Label(master, text="Esta es la primera ventana!")
         self.etiqueta.pack()
 
-        "Botones, se declaran los objetos, se les asigna un texto y un comando a ejecutar"
         self.botonSaludo = Button(master, text="Saludar", command=self.saludar)
         self.botonSaludo.pack()
 
@@ -22,8 +30,12 @@ class VentanaEjemplo:
         self.botonCerrar.pack()
 
     def saludar(self):
-        print("Buen dia!!")
-        
+        """
+        Método que se ejecuta al hacer clic en el botón "Saludar".
+        Imprime un saludo por la consola.
+        """
+        print("¡Buen día!")
+
 root = Tk()
 miVentana = VentanaEjemplo(root)
 root.mainloop()
