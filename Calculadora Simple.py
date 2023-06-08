@@ -2,14 +2,29 @@
 import tkinter as tk
 
 def button_click(number):
+    """
+    Esta función se ejecuta cuando se presiona un botón numérico.
+    Actualiza el campo de entrada de la calculadora con el número seleccionado.
+
+    Args:
+        number (int): El número seleccionado por el usuario.
+    """
     current = entry.get()
     entry.delete(0, tk.END)
     entry.insert(tk.END, current + str(number))
 
 def button_clear():
+    """
+    Esta función se ejecuta cuando se presiona el botón de borrado (Clear).
+    Borra el contenido del campo de entrada de la calculadora.
+    """
     entry.delete(0, tk.END)
 
 def button_add():
+    """
+    Esta función se ejecuta cuando se presiona el botón de suma (+).
+    Realiza la operación de suma y almacena el primer número y la operación actual.
+    """
     first_number = entry.get()
     global f_num
     global math_operation
@@ -18,6 +33,10 @@ def button_add():
     entry.delete(0, tk.END)
 
 def button_subtract():
+    """
+    Esta función se ejecuta cuando se presiona el botón de resta (-).
+    Realiza la operación de resta y almacena el primer número y la operación actual.
+    """
     first_number = entry.get()
     global f_num
     global math_operation
@@ -26,6 +45,10 @@ def button_subtract():
     entry.delete(0, tk.END)
 
 def button_multiply():
+    """
+    Esta función se ejecuta cuando se presiona el botón de multiplicación (*).
+    Realiza la operación de multiplicación y almacena el primer número y la operación actual.
+    """
     first_number = entry.get()
     global f_num
     global math_operation
@@ -34,6 +57,10 @@ def button_multiply():
     entry.delete(0, tk.END)
 
 def button_divide():
+    """
+    Esta función se ejecuta cuando se presiona el botón de división (/).
+    Realiza la operación de división y almacena el primer número y la operación actual.
+    """
     first_number = entry.get()
     global f_num
     global math_operation
@@ -42,6 +69,10 @@ def button_divide():
     entry.delete(0, tk.END)
 
 def button_equal():
+    """
+    Esta función se ejecuta cuando se presiona el botón de igual (=).
+    Realiza la operación matemática correspondiente y muestra el resultado en el campo de entrada.
+    """
     second_number = entry.get()
     entry.delete(0, tk.END)
     if math_operation == "addition":
@@ -54,7 +85,7 @@ def button_equal():
         if float(second_number) != 0:
             entry.insert(tk.END, f_num / float(second_number))
         else:
-            entry.insert(tk.END, "Error: Division by zero")
+            entry.insert(tk.END, "Error: División por cero")
 
 # Crear la ventana principal
 window = tk.Tk()
