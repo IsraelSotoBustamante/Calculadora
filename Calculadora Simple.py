@@ -2,29 +2,26 @@
 import tkinter as tk
 
 def button_click(number):
-    """
-    Esta función se ejecuta cuando se presiona un botón numérico.
-    Actualiza el campo de entrada de la calculadora con el número seleccionado.
+    
+    "Esta función se ejecuta cuando se presiona un botón numérico."
+    "Se integra el campo de entrada de la calculadora con el número seleccionado."
 
-    Args:
-        number (int): El número seleccionado por el usuario.
-    """
+    "Args:"
+        "number (int): El número seleccionado por el usuario."
+    
     current = entry.get()
     entry.delete(0, tk.END)
     entry.insert(tk.END, current + str(number))
 
 def button_clear():
-    """
-    Esta función se ejecuta cuando se presiona el botón de borrado (Clear).
-    Borra el contenido del campo de entrada de la calculadora.
-    """
+    "Esta función se ejecuta cuando se presiona el botón de borrado,Borra el contenido del campo de entrada de la calculadora."
     entry.delete(0, tk.END)
 
 def button_add():
-    """
-    Esta función se ejecuta cuando se presiona el botón de suma (+).
-    Realiza la operación de suma y almacena el primer número y la operación actual.
-    """
+    
+    "Esta función se ejecuta cuando se presiona el botón de suma (+)"
+    "Realiza la operación de suma y almacena el primer número y la operación actual"
+    
     first_number = entry.get()
     global f_num
     global math_operation
@@ -33,10 +30,10 @@ def button_add():
     entry.delete(0, tk.END)
 
 def button_subtract():
-    """
-    Esta función se ejecuta cuando se presiona el botón de resta (-).
-    Realiza la operación de resta y almacena el primer número y la operación actual.
-    """
+    
+    "Esta función se ejecuta cuando se presiona el botón de resta (-)"
+    "Realiza la operación de resta y almacena el primer número y la operación actual"
+    
     first_number = entry.get()
     global f_num
     global math_operation
@@ -45,10 +42,10 @@ def button_subtract():
     entry.delete(0, tk.END)
 
 def button_multiply():
-    """
-    Esta función se ejecuta cuando se presiona el botón de multiplicación (*).
-    Realiza la operación de multiplicación y almacena el primer número y la operación actual.
-    """
+    
+    "Esta función se ejecuta cuando se presiona el botón de multiplicación (*)."
+    "Realiza la operación de multiplicación y almacena el primer número y la operación actual."
+    
     first_number = entry.get()
     global f_num
     global math_operation
@@ -57,10 +54,10 @@ def button_multiply():
     entry.delete(0, tk.END)
 
 def button_divide():
-    """
-    Esta función se ejecuta cuando se presiona el botón de división (/).
-    Realiza la operación de división y almacena el primer número y la operación actual.
-    """
+    
+    "Esta función se ejecuta cuando se presiona el botón de división (/)"
+    "Realiza la operación de división y almacena el primer número y la operación actual"
+    
     first_number = entry.get()
     global f_num
     global math_operation
@@ -69,10 +66,10 @@ def button_divide():
     entry.delete(0, tk.END)
 
 def button_equal():
-    """
-    Esta función se ejecuta cuando se presiona el botón de igual (=).
-    Realiza la operación matemática correspondiente y muestra el resultado en el campo de entrada.
-    """
+    
+    "Esta función se ejecuta cuando se presiona el botón de igual (=)"
+    "Realiza la operación matemática correspondiente y muestra el resultado en el campo de entrada"
+    
     second_number = entry.get()
     entry.delete(0, tk.END)
     if math_operation == "addition":
@@ -87,15 +84,15 @@ def button_equal():
         else:
             entry.insert(tk.END, "Error: División por cero")
 
-# Crear la ventana principal
+"Crear la ventana principal"
 window = tk.Tk()
 window.title("Calculadora")
 
-# Crear el campo de entrada
+"Crear el campo de entrada"
 entry = tk.Entry(window, width=35, justify="right")
 entry.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
 
-# Crear los botones numéricos
+"Crear los botones numéricos"
 button_1 = tk.Button(window, text="1", padx=20, pady=10, command=lambda: button_click(1))
 button_2 = tk.Button(window, text="2", padx=20, pady=10, command=lambda: button_click(2))
 button_3 = tk.Button(window, text="3", padx=20, pady=10, command=lambda: button_click(3))
@@ -107,19 +104,19 @@ button_8 = tk.Button(window, text="8", padx=20, pady=10, command=lambda: button_
 button_9 = tk.Button(window, text="9", padx=20, pady=10, command=lambda: button_click(9))
 button_0 = tk.Button(window, text="0", padx=20, pady=10, command=lambda: button_click(0))
 
-# Crear los botones de operaciones
+"Crear los botones de operaciones"
 button_add = tk.Button(window, text="+", padx=19, pady=10, command=button_add)
 button_subtract = tk.Button(window, text="-", padx=20, pady=10, command=button_subtract)
 button_multiply = tk.Button(window, text="*", padx=20, pady=10, command=button_multiply)
 button_divide = tk.Button(window, text="/", padx=20, pady=10, command=button_divide)
 
-# Crear el botón igual
+"Crear el botón igual"
 button_equal = tk.Button(window, text="=", padx=46, pady=10, command=button_equal)
 
-# Crear el botón de borrado
+"Crear el botón de borrado"
 button_clear = tk.Button(window, text="C", padx=19, pady=10, command=button_clear)
 
-# Ubicar los botones en la ventana
+"Ubicar los botones en la ventana"
 button_1.grid(row=1, column=0)
 button_2.grid(row=1, column=1)
 button_3.grid(row=1, column=2)
@@ -139,5 +136,5 @@ button_divide.grid(row=4, column=3)
 button_equal.grid(row=4, column=1, columnspan=2)
 button_clear.grid(row=5, column=0, columnspan=4)
 
-# Iniciar el bucle principal de la aplicación
+"Iniciar el bucle principal de la aplicación"
 window.mainloop()
