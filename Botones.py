@@ -4,18 +4,18 @@ from tkinter import Button, Label, Tk
 
 class VentanaEjemplo:
     def __init__(self, master):
-        """
-        Clase que define una ventana de ejemplo con una interfaz gráfica simple.
+        "Clase que define una ventana de ejemplo con una interfaz gráfica simple."
 
-        Args:
-            master (Tk): El objeto raíz Tkinter.
+        
+        "Args:"
+           " master (Tk): El objeto raíz Tkinter."
 
-        Atributos:
-            master (Tk): El objeto raíz Tkinter.
-            etiqueta (Label): Etiqueta de texto en la ventana.
-            botonSaludo (Button): Botón para saludar.
-            botonCerrar (Button): Botón para cerrar la ventana.
-        """
+        "Atributos:"
+           " master (Tk): El objeto raíz Tkinter."
+           " etiqueta (Label): Etiqueta de texto en la ventana."
+           " botonSaludo (Button): Botón para saludar."
+           " botonCerrar (Button): Botón para cerrar la ventana."
+        
         self.master = master
 
         master.title("Una simple interfaz gráfica")
@@ -30,10 +30,10 @@ class VentanaEjemplo:
         self.botonCerrar.pack()
 
     def saludar(self):
-        """
-        Método que se ejecuta al hacer clic en el botón "Saludar".
-        Imprime un saludo por la consola.
-        """
+        
+       " Método que se ejecuta al hacer clic en el botón Saludar."
+       " Imprime un saludo por la consola."
+        
         print("¡Buen día!")
 
 root = Tk()
