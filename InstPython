@@ -1,1 +1,12 @@
-
+#Primeramente vamos a ubicar nuestro sistema operativo(en este caso sera para windows 10 de 64bits)
+#Buscar la pagina de instalacion de python
+#Ir al apartado de istalacion de windows
+#Descargar el ejecutable de Python 3.6 de 64 bits
+#Inicia la instalacion de python abriendo el ejecutable que acabas de descargar (Python-3.6.0-amd64.exe) con doble click
+#Una vez con el instalador abierto marque ambos checkbox de abajo (Install launcher for all users (recommended) y Add Python 3.6 to PATH.)
+#Seleccione la opcion de descarga Customizada
+#En la siguiente Ventana (Opcional Features) verifica que todas las casillas esten activas y haz click en Next
+#En la ventana de Advanced Opcions verifica que las primeras 6 casillas esten marcadas y haz click en Install
+#En unos segundos empezará el proceso de instalacion , al terminar se abrira la ventana de setup was successful , esto quiere decir que la instalacipn a finalizado
+#cierra la ventana haciendo click en Close 
+#Listo tienes Python descargado:)
